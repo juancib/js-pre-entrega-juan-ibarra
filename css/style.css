@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(136, 199, 241);
+}
+
+header{
+    height: 90px;
+    background-color: rgb(244, 181, 99);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+main{
+    height: 80vh;
+}
+footer{
+    height: 150px;
+    background-color: rgb(155, 155, 155);
+}
+h1{
+    font-size: 3em;
+}
