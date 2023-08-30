@@ -41,7 +41,7 @@ function opcionGanadora (min, max){
 //le pide al usuario que elija una opción y la cantidad de puntos a apostar y determina si el usuario gana o pierde
 function realizarApuesta(){
 
-    opcion = parseInt(prompt("Eligé la opción en la cual quieras apostar:"+"\n"+"(1) Equipo A '"+cuotaA+"'"+"\n"+"(2) Empate '"+cuotaE+"'"+"\n"+"(3) Equipo B '"+cuotaB+"resultado "+resultadoGanador));
+    opcion = parseInt(prompt("Eligé la opción en la cual quieras apostar:"+"\n"+"(1) Equipo A '"+cuotaA+"'"+"\n"+"(2) Empate '"+cuotaE+"'"+"\n"+"(3) Equipo B '"+cuotaB));
 
     apuesta = parseInt(prompt("Tienes "+puntos+" puntos disponibles."+"\n"+"Cuántos deseas apostar?"));
     if(apuesta > puntos || isNaN(apuesta)){
