@@ -3,20 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Betarg</title>
+    <title>ApostARG</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>BetArg</h1>
+    <header class="header">
+        <div class="logo">
+            <img src="img/logo-white.png" alt="Logo de empresa">
+        </div>
+        <nav>
+           <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Reglas</a></li>
+           </ul>
+        </nav>
+        <a class="btn" href="#"><button>Contacto</button></a>
     </header>
     <main>
-        <section>
-            
+        <section class="card">
+            <div class="container">
+                <div class="titulo">
+                    <h4><b>¿Quién va a ganar?</b></h4>
+                    <br>
+                    <hr>
+                    <form id='form1' name='form1'>
+                        <label for="x1">Equipo 1 <a class="cuotaequipo1">(numero)</a></label>
+                        <input type="text" placeholder="Puntos" id="equipo1">
+                        <input type="button" value="Apostar" id="equipo1" name="equipo1" onclick= "" /><br><br>
+                        <label for="x1">Empate <a class="cuotaempate">(numero)</a></label>
+                        <input type="text" placeholder="Puntos" id="empate">
+                        <input type="button" value="Apostar" id="empate" name="empate" onclick= "" /><br><br>
+                        <label for="x1">Equipo 2 <a class="cuotaequipo2">(numero)</a></label>
+                        <input type="text" placeholder="Puntos" id="equipo2">
+                        <input type="button" value="Apostar" id="equipo2" name="equipo2" onclick= "" />
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-
+    <footer class="footer">
+        <div class="copyright">
+            Copyright 2023 &copy; ApostARG. Todos los derechos reservados.
+        </div>
+        <div class="creditos">
+            Diseñado por <a target="blank" href="https://wa.me/+542995344163"> 94 Studio <3</a>
+        </div>
     </footer>
     <script src="js/main.js"></script>
 </body>

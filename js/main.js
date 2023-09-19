@@ -15,6 +15,7 @@ se informa si el usuario ganó o perdió
 */
 
 //generar valores
+let login = [{user: "juan94",pass: "juan1234"},{user: "admin",pass: "admin"},{user: "invitado",pass:"1234"}];
 let cuotaA = 0;
 let cuotaB = 0;
 let cuotaE = 0;
@@ -22,6 +23,19 @@ let apuesta = 0;
 let ganancia = 0;
 let resultadoGanador = 0;
 let puntos = 10000;
+
+//valida que el usuario y la contraseña esten correctas con el array objeto
+
+function hacerLogin(){
+    usuario = prompt("Ingrese su usuario");
+    contrasenia = prompt("Ingrese su contraseña");
+    if(login.some(e => e.user === usuario) && login.some(e => e.pass === contrasenia)){
+        alert ("Bienvenido, "+ usuario + " ;)");
+    }else{
+        alert("Lo sentimos, usuario o contraseña invalido");
+        return location.reload();
+    }
+}
 
 //genera un valor aleatorio de cada cuota
 function cuotaAleatoria(minimo, maximo, decimales) {
@@ -41,12 +55,11 @@ function opcionGanadora (min, max){
 //le pide al usuario que elija una opción y la cantidad de puntos a apostar y determina si el usuario gana o pierde
 function realizarApuesta(){
 
-    opcion = parseInt(prompt("Eligé la opción en la cual quieras apostar:"+"\n"+"(1) Equipo A '"+cuotaA+"'"+"\n"+"(2) Empate '"+cuotaE+"'"+"\n"+"(3) Equipo B '"+cuotaB));
+    opcionElegida();
 
     apuesta = parseInt(prompt("Tienes "+puntos+" puntos disponibles."+"\n"+"Cuántos deseas apostar?"));
     if(apuesta > puntos || isNaN(apuesta)){
-        apuesta = parseInt(prompt("Tu apuesta es incorrecta"+"\n"+"Tienes "+puntos+" puntos disponibles."+"\n"+"Cuántos deseas apostar?"));
-        resultado()
+        return window.location.reload();
     }else{
         resultado();
     }
@@ -90,8 +103,21 @@ function resultado(){
     }
 }
 
-//iniciar
+//validar si la opcion es correcta
 
+function opcionElegida(){
+    let valido = false;
+    opcion = parseInt(prompt("Eligé la opción en la cual quieras apostar:"+"\n"+"(1) Equipo A '"+cuotaA+"'"+"\n"+"(2) Empate '"+cuotaE+"'"+"\n"+"(3) Equipo B '"+cuotaB));
+    if(opcion <= 3){
+        valido = true;
+        return valido;
+    }else{
+        window.location.reload();
+    }
+}
+
+//iniciar
+hacerLogin();
 cuotaAleatoria(0,30,2);
 opcionGanadora(1,3);
 realizarApuesta();
