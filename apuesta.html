@@ -21,17 +21,26 @@
         <a class="btn" href="#"><button>Contacto</button></a>
     </header>
     <main>
+        <div>
+            <h3 id="resultado"></h3>
+        </div>
         <section class="card">
             <div class="container">
+                
                 <div class="titulo">
-                    <h4><b>¿Estas listo para divertirte?</b></h4>
+                    <h4><b>¿Quién va a ganar?</b></h4>
                     <br>
                     <hr>
-                    <form id='form1' name='form1'>
-                        <label>Login</label>
-                        <input type="text" placeholder="Usuario" id="user"><br><br>
-                        <input type="password" placeholder="Contraseña" id="pass">
-                        <input type="button" value="Ingresar" id="inicio" name="inicio" onclick= "hacerLogin()" />
+                    <form id='partido' name='partido'>
+                        <label for="x1">Equipo A <a id="cuotaequipo1"></a></label>
+                        <input type="text" placeholder="Puntos" id="equipo1">
+                        <input type="button" value="Apostar" id="apostarEquipo1" name="apostarEquipo1" onclick= "betEquipo1()" /><br><br>
+                        <label for="x1">Empate <a id="cuotaempate"></a></label>
+                        <input type="text" placeholder="Puntos" id="empate">
+                        <input type="button" value="Apostar" id="apostarEmpate" name="apostarEmpate" onclick= "betEmpate()" /><br><br>
+                        <label for="x1">Equipo B <a id="cuotaequipo2"></a></label>
+                        <input type="text" placeholder="Puntos" id="equipo2">
+                        <input type="button" value="Apostar" id="apostarEquipo2" name="apostarEquipo2" onclick= "betEquipo2()" />
                     </form>
                 </div>
             </div>
@@ -45,6 +54,6 @@
             Diseñado por <a target="blank" href="https://wa.me/+542995344163"> 94 Studio <3</a>
         </div>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="js/apuesta.js"></script>
 </body>
 </html>
