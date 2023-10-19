@@ -112,7 +112,7 @@ footer{
 
 main{
   padding: 5%;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -137,4 +137,18 @@ main{
 /* Add some padding inside the card container */
 .container {
   padding: 40px;
+}
+
+table thead {
+  background:#302b63;
+  color:white;
+}
+
+.ganadores{
+  background-color: antiquewhite;
+  margin-top: 30px;
+}
+
+.resultados{
+  margin: 20px;
 }
